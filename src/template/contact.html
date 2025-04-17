@@ -40,6 +40,23 @@
   <main>
     <p>This is a simple HTML home page.</p>
     <p>You can customize it however you like!</p>
+    <p>
+        Address: {{ address }} <br>
+        Phone: {{ phone }} <br>
+        <ul>
+            {% for abc in list %}
+                {% if abc == 312 %}
+                    <li>{{ forloop.counter }} - {{ abc|add:22 }}</li>
+                {% elif abc == "Abc" %}
+                    <li>This is not the network</li>
+                {% else %}
+                    <li>{{ forloop.counter }} - {{ abc }}</li>
+                {% endif %}
+                
+                
+            {% endfor %}
+            </ul>
+    </p>
   </main>
 
   <footer>
